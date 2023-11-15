@@ -43,7 +43,7 @@ export default function TweetInput() {
     });
 
 
-    if (image){
+    if (image) {
 
       const imageRef = ref(storage, `tweetImages/${docRef.id}`)
       const uploadImage = await uploadString(imageRef, image, "data_url")
@@ -59,9 +59,9 @@ export default function TweetInput() {
     setLoading(false)
   }
 
-  function addImagetoTweet(e){
+  function addImagetoTweet(e) {
     const reader = new FileReader()
-    if (e.target.files[0]){
+    if (e.target.files[0]) {
       reader.readAsDataURL(e.target.files[0])
     }
 
@@ -94,17 +94,17 @@ export default function TweetInput() {
           <div className="relative mb-4">
 
             <div
-            onClick={() => setImage(null)}
-            className="absolute top-1 left-1
+              onClick={() => setImage(null)}
+              className="absolute top-1 left-1
             bg-[#272c26] rounded-full w-8 h-8 flex justify-center
             items-center cursor-pointer hover:bg-white hover:bg-opacity-10
             ">
-              <XIcon className="h-5" /> 
+              <XIcon className="h-5" />
 
             </div>
             <img
-            className="rounded-2xl max-h-80 object-contain"
-            src={image} />
+              className="rounded-2xl max-h-80 object-contain"
+              src={image} />
 
 
           </div>
@@ -114,14 +114,14 @@ export default function TweetInput() {
           {/* ICNONS DIV */}
           <div className="flex space-x-0">
             <div
-            onClick={() => filePickerRef.current.click()}
-            className="iconAnimation">
+              onClick={() => filePickerRef.current.click()}
+              className="iconAnimation">
               <PhotographIcon className="h-[22px] text-[#1d9bf0]" />
             </div>
-            <input 
-            ref={filePickerRef}
-            onChange={addImagetoTweet}
-            className="hidden" type="file" />
+            <input
+              ref={filePickerRef}
+              onChange={addImagetoTweet}
+              className="hidden" type="file" />
             <div className="iconAnimation">
               <ChartBarIcon className="h-[22px] text-[#1d9bf0]" />
             </div>
@@ -137,9 +137,9 @@ export default function TweetInput() {
           </div>
 
           <button
-          onClick={sendTweet}
-          disabled={!text && !image}
-          className="bg-[#1d9bf0] rounded-full px-4 py-1.5
+            onClick={sendTweet}
+            disabled={!text && !image}
+            className="bg-[#1d9bf0] rounded-full px-4 py-1.5
           disabled:opacity-50
           ">
             Tweet
