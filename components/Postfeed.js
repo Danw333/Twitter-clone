@@ -3,7 +3,7 @@ import { collection, onSnapshot, orderBy, query } from "firebase/firestore";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import Tweet from "./Tweet";
-import TweetInput from "./Tweetinput";
+import TweetInput from "./TweetInput";
 
 export default function PostFeed() {
   const [tweets, setTweets] = useState([]);
