@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Inter } from "@next/font/google";
 import styles from "@/styles/Home.module.css";
 import Sidebar from "@/components/Sidebar";
-import PostFeed from "@/components/Postfeed";
+import Postfeed from "@/components/Postfeed";
 import Trending from "@/components/Trending";
 import BottomBanner from "@/components/BottomBanner";
 import { useSelector } from "react-redux";
@@ -26,7 +26,7 @@ export default function Home() {
     "
       >
         <Sidebar />
-        <PostFeed />
+        <Postfeed />
         <Trending />
       </div>
 
