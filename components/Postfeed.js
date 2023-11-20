@@ -32,12 +32,10 @@ export default function PostFeed() {
       </div>
       <TweetInput />
 
-      {tweets.map((tweet) => {
-        return 
-        (
-        <Link href={tweet.id} key={tweet.id}>
-        <Tweet id={tweet.id} data={tweet.data()} />;
-        </Link>
+      {tweets.map(tweet => {
+        return (
+        
+        <Tweet key={tweet.id} id={tweet.id} data={tweet.data()} />
         )
       })}
       <Tweet/>

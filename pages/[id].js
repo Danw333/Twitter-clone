@@ -15,7 +15,7 @@ export async function getServerSideProps(context) {
   const docSnap = await getDoc(docRef);
   const data = docSnap.data();
   const formattedData = {
-    username: data.username,
+   // username: data.username,
     name: data.name,
     photoUrl: data.photoUrl,
     text: data.tweet,
@@ -107,7 +107,7 @@ export default function CommentsPage({ tweetData }) {
             </button>
           </div>
 
-          {tweetData.comments?.map((comment) => (
+          {tweetData.comments?.map(comment => (
             <div className="border-b border-gray-700">
               <div className="flex space-x-3 p-3 border-gray-700">
                 <img

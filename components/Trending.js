@@ -6,7 +6,7 @@ export default function Trending() {
     <div className="hidden lg:flex flex-col ml-7 mt-4">
       <div
         className="flex space-x-3 bg-white bg-opacity-10
-            w-[300px] h-[44px] p-3 rounded-3xl
+            w-[300px] h-[44px] p-3 rounded-full
             "
       >
         <SearchIcon className="w-6 text-gray-600" />
@@ -46,7 +46,7 @@ export default function Trending() {
         </div>
         <div className="p-3 relative">
           <DotsHorizontalIcon className="w-5 text-gray-600 absolute right-4" />
-          <p className="text-xs text-gray-500">Trending in Polotics</p>
+          <p className="text-xs text-gray-500">Trending in Politics</p>
           <h1 className="text-[15px] font-bold">Biden</h1>
           <p className="text-xs text-gray-500">1.8Mil Tweets</p>
         </div>

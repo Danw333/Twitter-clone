@@ -22,7 +22,7 @@ export default function SignupModal() {
 
   const router = useRouter()
 
-  async function handleSingUp() {
+  async function handleSignUp() {
     const userCredentials = await createUserWithEmailAndPassword(
       auth,
       email,
@@ -40,7 +40,7 @@ export default function SignupModal() {
   }
 
   async function handleGuestSignIn(){
-    await signInWithEmailAndPassword(auth, "guest111100@gmail.com", "123456")
+    await signInWithEmailAndPassword(auth, "guest111800@gmail.com", "123456")
 
   }
 
@@ -48,7 +48,6 @@ export default function SignupModal() {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       if (!currentUser) return;
-      console.log(currentUser);
       dispatch(
         setUser({
           username: currentUser.email.split("@")[0],
@@ -99,26 +98,26 @@ export default function SignupModal() {
               placeholder="Full Name"
               className="h-10 mt-8 rounded-md bg-transparent border border-gray-700 p-6"
               type={"text"}
-              onChange={(e) => setName(e.target.value)}
+              onChange={e => setName(e.target.value)}
             />
             <input
               placeholder="Email"
               className="h-10 mt-8 rounded-md bg-transparent border border-gray-700 p-6"
               type={"email"}
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={e => setEmail(e.target.value)}
             />
             <input
               placeholder="Password"
               className="h-10 mt-8 rounded-md bg-transparent border border-gray-700 p-6"
               type={"password"}
-              onChange={(e) => setPassword(e.target.value)}
+              onChange={e => setPassword(e.target.value)}
             />
 
             <button
               className="bg-white text-black w-full font-bold
                 text-lg p-2 mt-8 rounded-md
                 "
-              onClick={handleSingUp}
+              onClick={handleSignUp}
             >
               Create Account
             </button>

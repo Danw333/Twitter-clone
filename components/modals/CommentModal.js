@@ -60,7 +60,7 @@ export default function CoomentModal() {
         "
         >
           <div className="absolute w-[2px] h-[77px] bg-gray-500
-          left-[40px] top-[96px] sm:left-[64px] sm:top-[120px]
+          left-[40px] top-[86px] sm:left-[64px] sm:top-[120px]
           
           "></div>
           <div
