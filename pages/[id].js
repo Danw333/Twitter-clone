@@ -1,4 +1,4 @@
-import PostFeed from "@/components/Postfeed";
+import Postfeed from "@/components/Postfeed";
 import Sidebar from "@/components/Sidebar";
 import Trending from "@/components/Trending";
 import Tweet from "@/components/Tweet";

@@ -1,8 +1,8 @@
 import { db } from "@/firebase";
 import { collection, onSnapshot, orderBy, query } from "firebase/firestore";
 import { useEffect, useState } from "react";
+import Tweetinput from "./Tweetinput";
 import Tweet from "./Tweet";
-import TweetInput from "./TweetInput"
 export default function PostFeed() {
   const [tweets, setTweets] = useState([]);
 
@@ -28,7 +28,7 @@ export default function PostFeed() {
       >
         Home
       </div>
-      <TweetInput/>
+      <Tweetinput/>
 
       {tweets.map(tweet => {
         return (

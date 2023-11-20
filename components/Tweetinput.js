@@ -14,7 +14,7 @@ import { useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 export default function TweetInput() {
-  const user = useSelector((state) => state.user);
+  const user = useSelector(state => state.user);
 
   const [text, setText] = useState("");
   const [image, setImage] = useState(null)
@@ -86,7 +86,7 @@ export default function TweetInput() {
           className="bg-transparent resize-none outline-none w-full
                 min-h-[50px] text-lg
                 "
-          onChange={(e) => setText(e.target.value)}
+          onChange={e => setText(e.target.value)}
           value={text}
         />
 
